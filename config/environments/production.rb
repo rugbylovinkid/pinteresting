@@ -76,4 +76,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # Reguired for Heroku.
+  # Note set to host orphanboy
+  config.action_mailer.default_url_options = { host: 'orphanboy.herokuapp.com' }
 end
