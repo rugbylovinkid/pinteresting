@@ -1,5 +1,12 @@
 <div class="jumbotron center">
-<h2>Bine ai venit! Bienvenido! Bienvenue! ברוכים הבאים<h2><h3>Support OrphanBoy's team and get the latest info <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-danger btn-lg" %> </h3>
+<h2>Bine ai venit! Bienvenido! Bienvenue! ברוכים הבאים<h2><h3>Support OrphanBoy's team and get the latest info<h3>
+<% if user_signed_in? %>
+          <%#do something%>
+     <% else %>
+       <p>
+      <h3><%= link_to "Sign Up", new_user_registration_path, class: "btn btn-danger btn-lg" %> </h3>
+      </p>
+   <% end %> 
 </div>
 	
 <h2>My name is Ari, and this is OrphanBoy's Code the Dream app!<h2>
@@ -11,7 +18,12 @@
 
 
 
-
+<% if user_signed_in? %>
+          <%#do something%>
+     <% else %>
+       <p>
 
 <h4>Team Members <%= link_to "Login", new_user_session_path , class: "btn btn-primary btn-md" %><h4>
-
+      </p>
+   <% end %> 
+</div>
